@@ -1,12 +1,12 @@
-import React from 'react'
-import { navItems } from '../data/index'
+import React from "react";
+import { navItems } from "../data/index";
 
 const Navbar = ({ activePage, handleNavClick, isNavbarOpen, toggleNavbar }) => {
   return (
     <>
       <div
         className={`2xl:w-80 xl:w-52 w-44 h-full bg-[#f8f8f8] flex flex-col justify-between pt-5 pl-6 pb-14 md:pb-0 absolute md:relative z-10 transition-transform duration-300 ${
-          isNavbarOpen ? 'translate-x-0' : '-translate-x-110 md:-translate-x-0'
+          isNavbarOpen ? "translate-x-0" : "-translate-x-110 md:-translate-x-0"
         }`}
       >
         <a
@@ -36,16 +36,16 @@ const Navbar = ({ activePage, handleNavClick, isNavbarOpen, toggleNavbar }) => {
           ))}
         </div>
         <div className="flex justify-between pr-6 pb-2">
-          <a href="#">
+          <a href="https://www.instagram.com/">
             <i className="bx bxl-instagram text-2xl text-red-600"></i>
           </a>
-          <a href="#">
+          <a href="https://x.com/">
             <i className="bx bxl-twitter text-2xl text-red-600"></i>
           </a>
-          <a href="#">
+          <a href="https://www.facebook.com/">
             <i className="bx bxl-facebook text-2xl text-red-600"></i>
           </a>
-          <a href="#">
+          <a href="https://www.youtube.com/@albertmathewsjohnson2619">
             <i className="bx bxl-youtube text-2xl text-red-600"></i>
           </a>
         </div>
@@ -54,10 +54,14 @@ const Navbar = ({ activePage, handleNavClick, isNavbarOpen, toggleNavbar }) => {
         className="fixed md:hidden bottom-4 left-4 p-2 text-4xl text-blue-400 z-30"
         onClick={toggleNavbar}
       >
-        {isNavbarOpen ? <i className="bx bx-x"></i> : <i className="bx bx-menu"></i>}
+        {isNavbarOpen ? (
+          <i className="bx bx-x"></i>
+        ) : (
+          <i className="bx bx-menu"></i>
+        )}
       </button>
     </>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
